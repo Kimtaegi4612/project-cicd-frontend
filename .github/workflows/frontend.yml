@@ -18,7 +18,8 @@ jobs:
     steps:
       # 체크아웃 -> gitbuv의 저장소로부터 소스 체크아웃
       - name: Checkout repository resource
-        uses: action/checkout@v2
+        uses: actions/checkout@v2
+
       # 환경변수 동적 생성 -> .env 파일 생성 (ec2 정보 세탕), 기존코드 수정(보안)
       - name: .env 환경 변수 동적 생성
         run: |
