@@ -2,6 +2,10 @@ import React, { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import axios from 'axios';
 
+// axios 통신 => 기본 URL 설정
+// 환경설정 파일에서 해당값을 읽어서 동적으로 세팅
+axios.defaults.baseURL = process.env.REACT_APP_API_URL;
+
 /**
  * 로그인 
  * @returns
@@ -19,8 +23,9 @@ function Login() {
     formData.append('password', pwd);
 
     const response = await axios({
-        url: 'http://localhost:8080/loginCheck',
-        method: 'POST',
+        // url: 'http://localhost:8080/loginCheck',
+        url: '/loginCheck',
+      method: 'POST',
         data: formData,
         // 중요
         // 쿠키나 HTTP 인증 정보를 함께 전송할 수 있도록 하는 설정
