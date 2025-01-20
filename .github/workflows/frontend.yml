@@ -25,20 +25,17 @@ jobs:
         run: |
           echo "&{{ secrets.CLIENT_ENV }}" > .env
           pwd
-          ls -a;l
+          ls -al
 
-      # 빌드를 위한 조건 -> nodejs 설치
-      # uses: actions/checkout@v2
+# 빌드를 위한 조건 -> nodejs 설치
+# uses: actions/setup-node@v2
 
-      # npm install 라이브러리 설치
-      # run: npm install
+# npm install 라이브러리 설치
+# run: npm install
 
-      # 빌드
-      # run: npm run build
+# 빌드
+# run: npm run build
 
-      # 빌드의 결과물을 ec2 업로드
-      # 대상: ./build/*
-      # 타겟: /home/ubuntu/client
-
-      # 뒷정리 (업로드 결과 -> nginx로 이동(설정), 디렉토리 정리)
-      #
+# 빌드의 결과물을 ec2 업로드
+# 대상 : ./build/*
+# 타겟 : /home/ubuntu/client
