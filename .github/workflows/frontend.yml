@@ -40,7 +40,7 @@ jobs:
 
       # 단위 테스트 -> 생략
       #- name: 단위 테스트
-      # run: npm test
+      # run: npm test.
 
       # 빌드
       # run: npm run build
