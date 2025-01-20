@@ -47,7 +47,7 @@ jobs:
       - name: 빌드
         run: |
           npm run build 
-          ls ..build
+          ls ./build
         
 
       # 빌드의 결과물을 ec2 업로드
