@@ -53,9 +53,9 @@ jobs:
       # 빌드의 결과물을 ec2 업로드
       # 대상 : ./build/*
       # 타겟 : /home/ubuntu/client
-      # 대상위치에 존재하는 모든 리소스 -> EC2의 ~/clint 하위의 복사해둬라
+      # 대상위치에 존재하는 모든 리소스->ec2의 ~/client 하위에 복사해둬라
       - name: EC2에 빌드된 파일/폴더들 업로드
-        uses: appleboy/acp-action@v0.1.7
+        uses: appleboy/scp-action@v0.1.7
         with:
           host: ${{ secrets.EC2_HOST }}
           username: ${{ secrets.EC2_USER }}
