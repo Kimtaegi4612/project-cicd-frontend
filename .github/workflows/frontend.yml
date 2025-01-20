@@ -23,13 +23,13 @@ jobs:
       # 환경변수 동적 생성 -> .env 파일 생성 (ec2 정보 세탕), 기존코드 수정(보안)
       - name: .env 환경 변수 동적 생성
         run: |
-          echo "&{{ secrets.CLIENT_ENV }}" > .env
+          echo "${{ secrets.CLIENT_ENV }}" > .env
           pwd
           ls -al
 
       # 빌드를 위한 조건 -> nodejs 설치
       - name: nodejs 설치
-      - uses: actions/setup-node@v2
+        uses: actions/setup-node@v2
         with:
           node-version: '22'
 
